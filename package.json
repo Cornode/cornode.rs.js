@@ -1,0 +1,51 @@
+{
+  "name": "@cornodeledger/cornode.rs",
+  "version": "0.1.2",
+  "description": "cornode rust to javascript libraries",
+  "main": "lib/cornode.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "prepublishOnly": "node_modules/babel-cli/bin/babel.js src --out-dir lib && cp src/cornode-rs.js lib/cornode-rs.js"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ],
+    "ignore": [
+      "src/cornode-rs.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cornodeledger/cornode.rs.js.git"
+  },
+  "keywords": [
+    "cornode",
+    "rust",
+    "tangle"
+  ],
+  "contributors": [
+    {
+      "name": "Paul Handy",
+      "email": "paul.d.handy@gmail.com",
+      "url": "https://github.com/paulhandy/"
+    },
+    {
+      "name": "Andreas C. Osowski",
+      "email": "andreas@osowski.de",
+      "url": "https://github.com/th0br0"
+    }
+  ],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/cornodeledger/cornode.rs.js/issues"
+  },
+  "homepage": "https://github.com/cornodeledger/cornode.rs.js#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-preset-latest": "^6.24.1"
+  }
+}
